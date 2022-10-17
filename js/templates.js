@@ -3,7 +3,7 @@ const retornoCards = (producto) => {
   return `<div class="tarjetas">
                 <div class="tarjetaImagen">${producto.imagen}</div>
                 <div class="tarjetaNombre">${producto.nombre}</div>
-                <div class="tarjetaPrecio">${producto.precio}</div>
+                <div class="tarjetaPrecio">$ ${producto.precio}</div>
                 <div class="tarjetaTipo">${producto.tipo}</div>
                 <div class="tarjetaBoton">
                     <button class="button button-outline button-add" id="${producto.nombre}" title="Click para agregar el '${producto.nombre}' al carrito">+</button>

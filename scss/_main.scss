@@ -48,3 +48,22 @@ main{
     
     }
 }
+.contenedorCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .tarjetas{
+        background-color: aquamarine;
+        border: solid 1px;
+        width: 150px;
+        height: 200px;
+        margin: 5px;
+        font-size: large;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        
+    }
+}
