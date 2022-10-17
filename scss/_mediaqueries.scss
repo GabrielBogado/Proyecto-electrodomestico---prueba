@@ -1,0 +1,27 @@
+@media(max-width:930px){
+    .gridPadre{
+        grid-template-rows: auto auto 50px;
+    }
+    header{
+        .contenedorHeader{
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            .contenedorSeparador{
+                margin-top: 5px;
+                button{
+                    margin: 0 4px;
+                    min-width: 65px;
+                    
+                }
+            }
+            .contenedorBusqueda{
+                margin-top: 5px;
+                min-width: 280px;
+            }
+            .contenedorLogo{
+                height: auto;
+            }
+        }
+    }
+}

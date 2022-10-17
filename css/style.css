@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 400px;
+}
+
+.gridPadre {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 130px auto 50px;
+  grid-template-columns: auto;
+  height: auto;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (max-width: 930px) {
+  .gridPadre {
+    grid-template-rows: auto auto 50px;
+  }
+  header .contenedorHeader {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+  header .contenedorHeader .contenedorSeparador {
+    margin-top: 5px;
+  }
+  header .contenedorHeader .contenedorSeparador button {
+    margin: 0 4px;
+    min-width: 65px;
+  }
+  header .contenedorHeader .contenedorBusqueda {
+    margin-top: 5px;
+    min-width: 280px;
+  }
+  header .contenedorHeader .contenedorLogo {
+    height: auto;
+  }
+}
+header {
+  background-image: url(/img/coposNieve.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+header .contenedorHeader {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+header .contenedorHeader .contenedorBusqueda {
+  width: 50%;
+}
+header .contenedorHeader .contenedorBusqueda #busqueda {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+header .contenedorHeader .contenedorLogo {
+  text-align: center;
+  width: auto;
+}
+header .contenedorHeader .contenedorLogo a {
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+header .contenedorHeader .contenedorSeparador {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+header .contenedorHeader .contenedorSeparador button {
+  width: 40%;
+  height: 40px;
+  border-radius: 10px;
+}
+header .contenedorHeader .contenedorSeparador button:hover {
+  background-color: rgb(191, 209, 241);
+  transition: 0.5s;
+}
+
+main {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/fondoMain.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .categorias {
+  background-color: rgb(191, 209, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+}
+main .categorias a {
+  padding-left: 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+main .categorias a:hover {
+  color: white;
+}
+
+#hero {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/hero.jpg);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 15px;
+}
+#hero .tituloHero {
+  color: rgb(191, 209, 241);
+  font-size: 3rem;
+  font-weight: bold;
+}
+#hero .subtituloHero {
+  color: rgb(191, 209, 241);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: blueviolet;
+}
+
+/*# sourceMappingURL=style.css.map */

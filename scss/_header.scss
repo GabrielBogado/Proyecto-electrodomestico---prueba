@@ -1,0 +1,54 @@
+header{
+    background-image: url(/img/coposNieve.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+        .contenedorHeader{
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .contenedorBusqueda{
+            //background-color: blueviolet;
+            width: 50%;
+            #busqueda{
+                width: 100%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                padding-left: 10px;
+                
+            }
+        }
+        .contenedorLogo{
+            text-align: center;
+            width: auto;
+            //background-color: blueviolet;
+            a{
+                font-size: 40px;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+        .contenedorSeparador{
+            //background-color: blueviolet;
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            button{
+                width: 40%;
+                height: 40px;
+                border-radius: 10px;
+                
+                &:hover{
+                    background-color: rgb(191, 209, 241);
+                    transition: .5s;
+                }
+                
+            }
+        }
+        }
+
+}
