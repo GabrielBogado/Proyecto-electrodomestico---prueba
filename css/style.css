@@ -101,10 +101,15 @@ header .contenedorHeader .contenedorSeparador {
   display: flex;
   justify-content: space-around;
 }
+header .contenedorHeader .contenedorSeparador a {
+  text-decoration: none;
+  color: black;
+}
 header .contenedorHeader .contenedorSeparador button {
   width: 40%;
   height: 40px;
   border-radius: 10px;
+  cursor: pointer;
 }
 header .contenedorHeader .contenedorSeparador button:hover {
   background-color: rgb(191, 209, 241);
@@ -175,6 +180,16 @@ main .categorias a:hover {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+.contenedorCard .tarjetas .button {
+  border: 1px solid blue;
+  border-radius: 5px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.contenedorCard .tarjetas .button:hover {
+  background-color: rgb(191, 209, 241);
 }
 
 footer {

@@ -1,5 +1,11 @@
 const contenedorCard = document.querySelector("div.contenedorCard");
 
+const activarBtnVendedor = () => {
+  const botonVendedor = document.querySelector(".botonVendedor");
+  botonVendedor.addEventListener("click", () => agregarProducto());
+};
+activarBtnVendedor();
+
 const activarBotonesAdd = () => {
   const botonesAdd = document.querySelectorAll(
     ".button.button-outline.button-add"
@@ -16,7 +22,7 @@ const cargarProductos = () => {
   );
   activarBotonesAdd();
 };
-cargarProductos();
+
 
 const agregarCarrito = (e) => {
   let resultado = productos.find((produ) => produ.nombre === e.target.id);
@@ -40,5 +46,5 @@ const recuperarCarrito = () => {
     console.warn("No se encontro un carrito guardado");
   }
 };
-
+cargarProductos();
 recuperarCarrito();

@@ -37,10 +37,15 @@ header{
             width: 20%;
             display: flex;
             justify-content: space-around;
+            a{
+                text-decoration: none;
+                color: black;
+            }
             button{
                 width: 40%;
                 height: 40px;
                 border-radius: 10px;
+                cursor: pointer;
                 
                 &:hover{
                     background-color: rgb(191, 209, 241);
