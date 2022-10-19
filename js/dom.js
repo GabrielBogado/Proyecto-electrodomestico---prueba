@@ -23,12 +23,20 @@ const cargarProductos = () => {
   activarBotonesAdd();
 };
 
+function sumaCarrito() {
+  let totalCarrito = carrito.reduce(
+    (acc, elemento) => acc + elemento.precio,
+    0
+  );
+  console.log("El total del carrito es de: $", totalCarrito);
+}
 
 const agregarCarrito = (e) => {
   let resultado = productos.find((produ) => produ.nombre === e.target.id);
   if (resultado !== undefined) {
     carrito.push(resultado);
     guardarCarrito();
+    sumaCarrito();
   }
 };
 
