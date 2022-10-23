@@ -1,6 +1,5 @@
 const contenedorCard = document.querySelector("div.contenedorCard");
 
-
 const activarBtnVendedor = () => {
   const botonVendedor = document.querySelector(".botonVendedor");
   botonVendedor.addEventListener("click", () => agregarProducto());
@@ -15,7 +14,6 @@ const activarBotonesAdd = () => {
     btn.addEventListener("click", (e) => agregarCarrito(e))
   );
 };
-
 
 const cargarProductos = () => {
   contenedorCard.innerHTML = "";

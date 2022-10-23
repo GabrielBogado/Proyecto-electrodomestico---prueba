@@ -1,5 +1,6 @@
 const productos = [];
 const carrito = [];
+let totalCarrito = 0;
 
 function generadorStock() {
   productos.push(
