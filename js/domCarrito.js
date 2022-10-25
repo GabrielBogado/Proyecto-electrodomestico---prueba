@@ -17,6 +17,7 @@ const cargaTablaCarrito = () => {
   if (localStorage.getItem("carrito")) {
     tbody.innerHTML = "";
     carrito.forEach((producto) => (tbody.innerHTML += tablaCarrtito(producto)));
+    activarBotonesEliminar();
   } else {
     alert("No se encontro ningun carrito");
   }
@@ -46,6 +47,6 @@ const recuperarCarrito = () => {
   }
 };
 
-recuperarCarrito(); 
+recuperarCarrito();
 cargaTablaCarrito();
-activarBotonesEliminar();
+/* activarBotonesEliminar(); */
