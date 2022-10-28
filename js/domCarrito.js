@@ -21,8 +21,6 @@ const cargaTablaCarrito = () => {
     tbody.innerHTML = "";
     carrito.forEach((producto) => (tbody.innerHTML += tablaCarrtito(producto)));
     activarBotonesEliminar();
-  } else {
-    alert("No se encontro ningun carrito");
   }
 };
 
@@ -55,7 +53,7 @@ const recuperarCarrito = () => {
       carritoRecuperado.forEach((producto) => carrito.push(producto));
     } else {
       localStorage.clear();
-      console.warn("El carrito se borro");
+      alert("El carrito se borro");
     }
   }
 };
