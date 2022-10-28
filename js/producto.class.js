@@ -27,7 +27,6 @@ function agregarProducto() {
   let seguirAgregando = confirm("¿Desea seguir agregando productos?");
   if (seguirAgregando) {
     agregarProducto();
-    //cargarProductos();
   } else {
     return cargarProductos();
   }

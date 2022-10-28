@@ -1,5 +1,6 @@
 const tbody = document.querySelector("tbody");
 
+//FUNCION QUE ACTIVA EL BOTON DE ELIMINAR PRODUCTO
 const activarBotonesEliminar = () => {
   const botonEliminar = document.querySelectorAll(".button.botonEliminar");
   botonEliminar.forEach((btn) =>
@@ -7,12 +8,14 @@ const activarBotonesEliminar = () => {
   );
 };
 
+// GUARDO EL CARRITO
 const guardarCarrito = () => {
-  if (carrito.length >= 0) {
+  if (carrito.length > 0) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
 };
 
+// FUNCION DONDE SE CARGA LA TABLA DEL CARRITO
 const cargaTablaCarrito = () => {
   if (localStorage.getItem("carrito")) {
     tbody.innerHTML = "";
@@ -23,6 +26,7 @@ const cargaTablaCarrito = () => {
   }
 };
 
+// FUNCION DONDE SE BUSCA EL INDICE Y SE ELIMINA PRODUCTO DEL CARRITO
 const quitarDeCarrito = (e) => {
   let eliminado = carrito.find((producto) => producto.nombre === e.target.id);
   let posicion = carrito.indexOf(eliminado);
@@ -32,21 +36,29 @@ const quitarDeCarrito = (e) => {
   }
 };
 
+// INTENTO DE RESTAR PRODUCTOS DEL PRECIO TOTAL, FALTA TERMINAR
 const restaCarrito = () => {
   totalCarrito = carrito.reduce((acc, elemento) => acc - elemento.precio, 0);
   console.log("El nuevo total es:", totalCarrito);
   guardarCarrito();
   cargaTablaCarrito();
 };
+
+// RECUPERO EL CARRITO Y SE PREGUNTA SI SE QUIERE ELIMINAR O SEGUIR CON EL CARRITO GUARDADO
 const recuperarCarrito = () => {
   if (localStorage.getItem("carrito")) {
-    let carritoRecuperado = JSON.parse(localStorage.getItem("carrito"));
-    carritoRecuperado.forEach((producto) => carrito.push(producto));
-  } else {
-    console.warn("No se encontro un carrito guardado");
+    let preguntaRecuperar = confirm(
+      "Hay un carrito guardado, ¿Desea recuperarlo?"
+    );
+    if (preguntaRecuperar) {
+      let carritoRecuperado = JSON.parse(localStorage.getItem("carrito"));
+      carritoRecuperado.forEach((producto) => carrito.push(producto));
+    } else {
+      localStorage.clear();
+      console.warn("El carrito se borro");
+    }
   }
 };
 
 recuperarCarrito();
 cargaTablaCarrito();
-/* activarBotonesEliminar(); */

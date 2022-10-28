@@ -1,3 +1,5 @@
+//TEMPLATE PARA VER EL CARRITO EN UNA TABLA CON BOTON PARA ELIMINAR
+
 const tablaCarrtito = (producto) => {
   return `<tr>
               <td class="nombreProducto">${producto.nombre}</td>
