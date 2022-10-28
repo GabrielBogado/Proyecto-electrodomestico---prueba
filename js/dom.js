@@ -28,9 +28,10 @@ const cargarProductos = () => {
   activarBotonesAdd();
 };
 
-// FUNCION PARA BUSCAR CON EL INPUT ALGUN PRODUCTO, FALTA PULIR
+// FUNCION PARA BUSCAR CON EL INPUT ALGUN PRODUCTO
 const botonDeBusqueda = () => {
   botonBusqueda.addEventListener("click", busquedaInput);
+  inputBusqueda.addEventListener("keyup", busquedaInput);
 };
 
 const busquedaInput = () => {
