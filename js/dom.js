@@ -46,14 +46,6 @@ const busquedaInput = () => {
   activarBotonesAdd();
 };
 
-// LA SUMA DE LO ACUMULADO EN EL CARRITO
-function sumaCarrito() {
-  let totalCarrito = carrito.reduce(
-    (acc, elemento) => acc + elemento.precio,
-    0
-  );
-  console.log("El total del carrito es de: $", totalCarrito);
-}
 
 // FUNCION QUE PERMITE AGREGAR LOS PRODUCTOS AL CARRITO
 const agregarCarrito = (e) => {
@@ -61,7 +53,6 @@ const agregarCarrito = (e) => {
   if (resultado !== undefined) {
     carrito.push(resultado);
     guardarCarrito();
-    sumaCarrito();
   }
 };
 

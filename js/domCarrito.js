@@ -1,4 +1,5 @@
 const tbody = document.querySelector("tbody");
+let totalCarrito;
 
 //FUNCION QUE ACTIVA EL BOTON DE ELIMINAR PRODUCTO
 const activarBotonesEliminar = () => {
@@ -20,6 +21,7 @@ const cargaTablaCarrito = () => {
   if (localStorage.getItem("carrito")) {
     tbody.innerHTML = "";
     carrito.forEach((producto) => (tbody.innerHTML += tablaCarrtito(producto)));
+    sumaCarrito();
     activarBotonesEliminar();
   }
 };
@@ -34,7 +36,7 @@ const quitarDeCarrito = (e) => {
   }
 };
 
-// INTENTO DE RESTAR PRODUCTOS DEL PRECIO TOTAL, FALTA TERMINAR
+// INTENTO DE RESTAR PRODUCTOS DEL PRECIO TOTAL
 const restaCarrito = () => {
   totalCarrito = carrito.reduce((acc, elemento) => acc - elemento.precio, 0);
   console.log("El nuevo total es:", totalCarrito);
