@@ -8,8 +8,10 @@ const tablaCarrtito = (producto) => {
               <td class="eliminarProducto"><button class="button botonEliminar" id="${producto.nombre}" title="Click para eliminar el producto del carrito">❌</button></td>
             </tr>`;
 };
+
+// SUMA DE CARRITO Y TOTAL
 function sumaCarrito() {
-  /* let  */totalCarrito = carrito.reduce(
+ totalCarrito = carrito.reduce(
     (acc, elemento) => acc + elemento.precio,
     0
   );
