@@ -26,6 +26,17 @@ const cargaTablaCarrito = () => {
   }
 };
 
+// SUMA DE CARRITO Y TOTAL
+function sumaCarrito() {
+  totalCarrito = carrito.reduce((acc, elemento) => acc + elemento.precio, 0);
+  tbody.innerHTML += `<tr>
+             <td></td>
+             <td>TOTAL:</td>
+             <td class="totalProducto">${totalCarrito.toFixed(2)}</td>
+           </tr>`;
+}
+sumaCarrito();
+
 // FUNCION DONDE SE BUSCA EL INDICE Y SE ELIMINA PRODUCTO DEL CARRITO
 const quitarDeCarrito = (e) => {
   let eliminado = carrito.find((producto) => producto.nombre === e.target.id);
@@ -38,7 +49,7 @@ const quitarDeCarrito = (e) => {
 
 // INTENTO DE RESTAR PRODUCTOS DEL PRECIO TOTAL
 const restaCarrito = () => {
-  totalCarrito = carrito.reduce((acc, elemento) => acc - elemento.precio, 0);
+  totalCarrito = carrito.reduce((acc, elemento) => elemento.precio - acc, 0);
   console.log("El nuevo total es:", totalCarrito);
   guardarCarrito();
   cargaTablaCarrito();

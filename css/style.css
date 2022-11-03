@@ -21,7 +21,7 @@ html {
   grid-template-areas: "header" "main" "footer";
   grid-template-rows: 130px auto 50px;
   grid-template-columns: auto;
-  height: auto;
+  height: 800px;
 }
 
 header {
@@ -76,7 +76,14 @@ header .contenedorHeader {
   align-items: center;
 }
 header .contenedorHeader .contenedorBusqueda {
+  display: flex;
   width: 50%;
+}
+header .contenedorHeader .contenedorBusqueda .botonBusqueda {
+  font-size: 2rem;
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
 }
 header .contenedorHeader .contenedorBusqueda #busqueda {
   width: 100%;
