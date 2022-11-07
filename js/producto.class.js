@@ -21,7 +21,7 @@ function agregarProducto() {
   let precio = parseInt(prompt("Ingrese precio:"));
   let stock = parseInt(prompt("Ingrese stock disponible:"));
   let tipo = prompt("Ingrese tipo de producto").toUpperCase();
-  let imagen = prompt("Ingrese emoji:");
+  let imagen = prompt("Ingrese link de imagen:");
 
   productos.push(new Producto(nombre, precio, stock, tipo, imagen));
   let seguirAgregando = confirm("¿Desea seguir agregando productos?");

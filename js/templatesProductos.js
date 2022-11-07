@@ -1,7 +1,7 @@
 //TEMPLATES PARA ARMAR LA ESTRUCTURA DE HTML CON JS
 const retornoCards = (array) => {
   return `<div class="tarjetas">
-                <div class="tarjetaImagen">${array.imagen}</div>
+                <div class="tarjetaImagen"><img src="${array.imagen}" alt="${array.nombre}"></div>
                 <div class="tarjetaNombre">${array.nombre}</div>
                 <div class="tarjetaPrecio">$ ${array.precio}</div>
                 <div class="tarjetaTipo">${array.tipo}</div>

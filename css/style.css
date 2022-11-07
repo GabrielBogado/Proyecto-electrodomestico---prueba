@@ -180,13 +180,20 @@ main .categorias a:hover {
   background-color: aquamarine;
   border: solid 1px;
   width: 150px;
-  height: 200px;
+  height: 300px;
   margin: 5px;
-  font-size: large;
+  font-size: 1.7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+.contenedorCard .tarjetas .tarjetaImagen {
+  justify-content: start;
+}
+.contenedorCard .tarjetas .tarjetaImagen img {
+  width: 90px;
+  height: 90px;
 }
 .contenedorCard .tarjetas .button {
   border: 1px solid blue;
