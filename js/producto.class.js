@@ -1,4 +1,6 @@
 const IVA = 1.21;
+const carrito = [];
+const nuevosProductos = [];
 class Producto {
   constructor(nombre, precio, stock, tipo, imagen) {
     this.nombre = nombre;
@@ -22,11 +24,11 @@ function agregarProducto() {
   let tipo = prompt("Ingrese tipo de producto").toUpperCase();
   let imagen = prompt("Ingrese link de imagen:");
 
-  productos.push(new Producto(nombre, precio, stock, tipo, imagen));
+  nuevosProductos.push(new Producto(nombre, precio, stock, tipo, imagen));
   let seguirAgregando = confirm("¿Desea seguir agregando productos?");
   if (seguirAgregando) {
     agregarProducto();
   } else {
-    return cargarProductos();
+    return cargarProductosNuevos();
   }
 }

@@ -42,13 +42,13 @@ const cargarProductos = async () => {
   }
 };
 
-/* const cargarProductos = () => {
-  contenedorCard.innerHTML = "";
-  productos.forEach(
+const cargarProductosNuevos = () => {
+  /* contenedorCard.innerHTML = ""; */
+  nuevosProductos.forEach(
     (producto) => (contenedorCard.innerHTML += retornoCards(producto))
   );
   activarBotonesAdd();
-}; */
+};
 
 // FUNCION PARA BUSCAR CON EL INPUT ALGUN PRODUCTO
 const botonDeBusqueda = () => {
