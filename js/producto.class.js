@@ -1,5 +1,4 @@
 const IVA = 1.21;
-imagen = "🔥";
 class Producto {
   constructor(nombre, precio, stock, tipo, imagen) {
     this.nombre = nombre;

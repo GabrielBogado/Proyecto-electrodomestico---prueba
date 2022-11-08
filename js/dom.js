@@ -1,6 +1,8 @@
 const contenedorCard = document.querySelector("div.contenedorCard");
 const inputBusqueda = document.querySelector("#busqueda");
 const botonBusqueda = document.querySelector("button.botonBusqueda");
+let productos = [];
+const URL = "../baseDatos/productos.json";
 
 // CLICK PARA QUE EL VENDEDOR AGREGUE PRODUCTOS
 const activarBtnVendedor = () => {
@@ -20,13 +22,33 @@ const activarBotonesAdd = () => {
 };
 
 // FUNCION PARA CARGAR TARJETA DE PRODUCTOS
-const cargarProductos = () => {
+const cargarProductos = async () => {
+  let armandoHTML = "";
+  let activarBotones = true;
+
+  try {
+    const response = await fetch(URL);
+    productos = await response.json();
+    productos.forEach((producto) => (armandoHTML += retornoCards(producto)));
+  } catch (error) {
+    armandoHTML = retornoError();
+    activarBotones = false;
+    console.log(error);
+  } finally {
+    contenedorCard.innerHTML = armandoHTML;
+    if (activarBotones) {
+      activarBotonesAdd();
+    }
+  }
+};
+
+/* const cargarProductos = () => {
   contenedorCard.innerHTML = "";
   productos.forEach(
     (producto) => (contenedorCard.innerHTML += retornoCards(producto))
   );
   activarBotonesAdd();
-};
+}; */
 
 // FUNCION PARA BUSCAR CON EL INPUT ALGUN PRODUCTO
 const botonDeBusqueda = () => {
@@ -45,7 +67,6 @@ const busquedaInput = () => {
   );
   activarBotonesAdd();
 };
-
 
 // FUNCION QUE PERMITE AGREGAR LOS PRODUCTOS AL CARRITO
 const agregarCarrito = (e) => {

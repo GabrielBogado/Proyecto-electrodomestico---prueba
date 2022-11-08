@@ -1,5 +1,6 @@
 const tbody = document.querySelector("tbody");
 let totalCarrito;
+const carrito = [];
 
 //FUNCION QUE ACTIVA EL BOTON DE ELIMINAR PRODUCTO
 const activarBotonesEliminar = () => {

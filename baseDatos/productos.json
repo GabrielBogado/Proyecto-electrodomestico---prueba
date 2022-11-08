@@ -1,0 +1,100 @@
+[
+    {
+        "nombre":"BGH SILENT AIR",
+        "precio":72000,
+        "stock":10,
+        "tipo":"AIRE VENTANA",
+        "imagen":"../img/aireVentana.jpg"
+    },
+    {
+        "nombre":"BGH TURBO AIR",
+        "precio":102000,
+        "stock":10,
+        "tipo":"AIRE SPLIT",
+        "imagen":"../img/bghSplit.jpg"
+    },
+    {
+        "nombre":"SURREY XCOLD",
+        "precio":120000,
+        "stock":10,
+        "tipo":"AIRE VENTANA",
+        "imagen":"../img/aireVentana.jpg"
+    },
+    {
+        "nombre":"NEX FREE AIR",
+        "precio":89000,
+        "stock":10,
+        "tipo":"AIRE VENTANA",
+        "imagen":"../img/aireVentana.jpg"
+    },
+    {
+        "nombre":"SANSEI INVERTER",
+        "precio":132000,
+        "stock":10,
+        "tipo":"AIRE SPLIT",
+        "imagen":"../img/sanseiSplit.jpg"
+    },
+    {
+        "nombre":"PHILCO 2881",
+        "precio":96000,
+        "stock":10,
+        "tipo":"AIRE SPLIT",
+        "imagen":"../img/sanseiSplit.jpg"
+    },
+    {
+        "nombre":"TCL ELITE",
+        "precio":93000,
+        "stock":10,
+        "tipo":"AIRE SPLIT",
+        "imagen":"../img/sanseiSplit.jpg"
+    },
+    {
+        "nombre":"LILIANA VP16P",
+        "precio":12600,
+        "stock":10,
+        "tipo":"VENTILADOR PIE",
+        "imagen":"../img/ventiladorPie.jpg"
+    },
+    {
+        "nombre":"INDELPLAS IV16",
+        "precio":7200,
+        "stock":10,
+        "tipo":"VENTILADOR PIE",
+        "imagen":"../img/ventiladorPie.jpg"
+    },
+    {
+        "nombre":"PEABODY PE-VTR42",
+        "precio":31800,
+        "stock":10,
+        "tipo":"VENTILADOR TECHO",
+        "imagen":"../img/ventiladoTecho.jpg"
+    },
+    {
+        "nombre":"KANJI KJH-FH1209",
+        "precio":10900,
+        "stock":10,
+        "tipo":"VENTILADOR 3 EN 1",
+        "imagen":"../img/ventilador3en1.jpg"
+    },
+    {
+        "nombre":"AXEL AX-VTPOTAR",
+        "precio":25900,
+        "stock":10,
+        "tipo":"VENTILADOR TECHO",
+        "imagen":"../img/ventiladoTecho.jpg"
+    },
+    {
+        "nombre":"LILIANA VW2016",
+        "precio":17300,
+        "stock":10,
+        "tipo":"VENTILADOR DE PARED",
+        "imagen":"../img/ventiladorPared.jpg"
+    },
+    {
+        "nombre":"BGH SILENT AIR TURBO",
+        "precio":72000,
+        "stock":10,
+        "tipo":"AIRE SPLIT",
+        "imagen":"../img/bghSplit.jpg"
+    }
+]

@@ -3,7 +3,7 @@ const retornoCards = (array) => {
   return `<div class="tarjetas">
                 <div class="tarjetaImagen"><img src="${array.imagen}" alt="${array.nombre}"></div>
                 <div class="tarjetaNombre">${array.nombre}</div>
-                <div class="tarjetaPrecio">$ ${array.precio}</div>
+                <div class="tarjetaPrecio">$ ${array.precio*IVA}</div>
                 <div class="tarjetaTipo">${array.tipo}</div>
                 <div class="tarjetaBoton">
                     <button class="button button-outline button-add" id="${array.nombre}" title="Click para agregar el '${array.nombre}' al carrito">+</button>
