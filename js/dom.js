@@ -73,6 +73,7 @@ const agregarCarrito = (e) => {
   let resultado = productos.find((produ) => produ.nombre === e.target.id);
   if (resultado !== undefined) {
     carrito.push(resultado);
+    toast(`Se agrego ${resultado.nombre} al carrito`);
     guardarCarrito();
   }
 };
@@ -84,13 +85,11 @@ const guardarCarrito = () => {
   }
 };
 
-// SE RECUPERA EL CARRITO, PERO SE PREGUNTA ANTES SI SE QUIERE RECUPERAR O NO
+// SE RECUPERA EL CARRITO PARA PODER AGREGAR MAS PRODUCTOS
 const recuperarCarrito = () => {
   if (localStorage.getItem("carrito")) {
     let carritoRecuperado = JSON.parse(localStorage.getItem("carrito"));
     carritoRecuperado.forEach((producto) => carrito.push(producto));
-  } else {
-    console.warn("No se encontro un carrito guardado");
   }
 };
 botonDeBusqueda();
