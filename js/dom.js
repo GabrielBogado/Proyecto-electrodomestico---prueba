@@ -21,6 +21,14 @@ const activarBotonesAdd = () => {
   );
 };
 
+const cargarProductosNuevos = () => {
+  nuevosProductos.forEach(
+    (producto) => (contenedorCard.innerHTML += retornoCards(producto))
+  );
+  activarBotonesAdd();
+};
+cargarProductosNuevos();
+
 // FUNCION PARA CARGAR TARJETA DE PRODUCTOS
 const cargarProductos = async () => {
   let armandoHTML = "";
@@ -40,14 +48,6 @@ const cargarProductos = async () => {
       activarBotonesAdd();
     }
   }
-};
-
-const cargarProductosNuevos = () => {
-  /* contenedorCard.innerHTML = ""; */
-  nuevosProductos.forEach(
-    (producto) => (contenedorCard.innerHTML += retornoCards(producto))
-  );
-  activarBotonesAdd();
 };
 
 // FUNCION PARA BUSCAR CON EL INPUT ALGUN PRODUCTO

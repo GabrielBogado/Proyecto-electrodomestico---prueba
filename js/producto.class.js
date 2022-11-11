@@ -26,9 +26,29 @@ function agregarProducto() {
 
   nuevosProductos.push(new Producto(nombre, precio, stock, tipo, imagen));
   let seguirAgregando = confirm("¿Desea seguir agregando productos?");
+  //guardarProductosNuevos();
   if (seguirAgregando) {
     agregarProducto();
   } else {
     return cargarProductosNuevos();
   }
 }
+/* const guardarProductosNuevos = () => {
+  if (nuevosProductos > 0) {
+    localStorage.getItem("nuevosProductos", JSON.stringify(nuevosProductos));
+  }
+}; */
+
+/* //SE RECUPERA NUEVOS PRODUCTOS
+const recuperarProductosNuevos = () => {
+  if (localStorage.getItem("nuevosProductos")) {
+    let recuperandoNuevosProductos = JSON.parse(
+      localStorage.getItem("nuevosProductos")
+    );
+    recuperandoNuevosProductos.forEach((nuevos) =>
+      nuevosProductos.push(nuevos)
+    );
+  }
+};
+recuperarProductosNuevos();
+*/

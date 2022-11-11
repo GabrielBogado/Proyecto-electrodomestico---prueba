@@ -66,7 +66,7 @@ const recuperarCarrito = () => {
         cargaTablaCarrito();
       } else if (result.isDismissed) {
         localStorage.clear();
-        toast("El carrito se borro con Exito");
+        Swal.fire("El Carrito se borro con exito");
       }
     });
   }
