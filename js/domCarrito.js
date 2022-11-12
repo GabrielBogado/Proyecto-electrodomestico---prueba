@@ -1,5 +1,25 @@
 const tbody = document.querySelector("tbody");
+const botonComprar = document.querySelector(".botonComprar");
+const botonEliminarCarrito = document.querySelector(".botonEliminarCarrito");
 let totalCarrito;
+
+const carritoVacio = () => {
+  Swal.fire({
+    title: "El Carrito esta vacio",
+    timer: 5000,
+  });
+};
+
+const finalizarCompra = () => {
+  Swal.fire({
+    title: "Muchas gracias por su compra",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("carrito");
+      location.href = "index.html";
+    }
+  });
+};
 
 //FUNCION QUE ACTIVA EL BOTON DE ELIMINAR PRODUCTO
 const activarBotonesEliminar = () => {
@@ -66,11 +86,26 @@ const recuperarCarrito = () => {
         cargaTablaCarrito();
       } else if (result.isDismissed) {
         localStorage.clear();
-        Swal.fire("El Carrito se borro con exito");
+        Swal.fire({
+          title: "El Carrito se borro con exito",
+          timer: 2000,
+        });
       }
     });
   }
 };
+
+botonComprar.addEventListener("click", () => {
+  carrito.length === 0 ? carritoVacio() : finalizarCompra();
+});
+
+botonEliminarCarrito.addEventListener("click", () => {
+  Swal.fire({
+    title: "El Carrito se borro con exito",
+  });
+  localStorage.removeItem("carrito");
+  tbody.innerHTML = "";
+});
 
 recuperarCarrito();
 cargaTablaCarrito();

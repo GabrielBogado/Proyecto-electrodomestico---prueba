@@ -27,7 +27,6 @@ const cargarProductosNuevos = () => {
   );
   activarBotonesAdd();
 };
-cargarProductosNuevos();
 
 // FUNCION PARA CARGAR TARJETA DE PRODUCTOS
 const cargarProductos = async () => {
@@ -94,4 +93,5 @@ const recuperarCarrito = () => {
 };
 botonDeBusqueda();
 cargarProductos();
+cargarProductosNuevos();
 recuperarCarrito();
