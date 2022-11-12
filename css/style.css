@@ -172,28 +172,51 @@ main .categorias a:hover {
 }
 
 .contenedorCard {
+  gap: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .contenedorCard .tarjetas {
   background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgba(52, 161, 237, 0.543855042) 0%, rgba(0, 212, 255, 0.437412465) 100%);
-  border: solid 1px;
-  width: 150px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 156px;
   height: 300px;
-  margin: 5px;
-  font-size: 1.7rem;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  color: white;
+}
+.contenedorCard .tarjetas:hover {
+  border: 1px solid rgb(130, 195, 238);
 }
 .contenedorCard .tarjetas .tarjetaImagen {
-  justify-content: start;
+  display: block;
 }
 .contenedorCard .tarjetas .tarjetaImagen img {
   width: 90px;
   height: 90px;
+}
+.contenedorCard .tarjetas .tarjetaNombre {
+  display: block;
+  height: 40px;
+}
+.contenedorCard .tarjetas .tarjetaPrecio {
+  display: block;
+}
+.contenedorCard .tarjetas .tarjetaTipo {
+  display: block;
+  height: 40px;
+}
+.contenedorCard .tarjetas .tarjetaBoton {
+  display: block;
 }
 .contenedorCard .tarjetas .button {
   border: 1px solid blue;
@@ -206,13 +229,31 @@ main .categorias a:hover {
   background-color: rgb(191, 209, 241);
 }
 
+.subtituloProductos {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+.subtituloProductos h2 {
+  display: block;
+  color: white;
+  font-size: 2rem;
+}
+
 footer {
   background-image: url(../img/coposNieve.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+footer .contenedorFooter {
   color: white;
   font-weight: bold;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

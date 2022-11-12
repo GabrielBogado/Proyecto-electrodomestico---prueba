@@ -1,20 +1,30 @@
 .contenedorCard{
+    gap: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     .tarjetas{
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(52,161,237,0.5438550420168067) 0%, rgba(0,212,255,0.4374124649859944) 100%);
-        border: solid 1px;
-        width: 150px;
+        border:  1px solid;
+        border-radius: 10px;
+        width: 156px;
         height: 300px;
-        margin: 5px;
-        font-size: 1.7rem;
+        gap: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        color: white;
+        &:hover{
+            border: 1px solid rgb(130, 195, 238);
+        }
         .tarjetaImagen{
-            justify-content: start;
+            display: block;
+            
             img{
                 width: 90px;
                 height: 90px;
@@ -22,7 +32,24 @@
         } 
 
         .tarjetaNombre{
+            display: block;
+            height: 40px;
+            
+        }
 
+        .tarjetaPrecio{
+            display: block;
+            
+        }
+
+        .tarjetaTipo{
+            display: block;
+            height: 40px;
+        }
+
+        .tarjetaBoton{
+            display: block;
+            
         }
             
         .button{
@@ -35,5 +62,16 @@
              background-color:rgb(191, 209, 241)
             }
         }
+    }
+}
+
+.subtituloProductos{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    h2{
+        display: block;
+        color: white;
+        font-size: 2rem;
     }
 }

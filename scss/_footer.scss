@@ -3,6 +3,13 @@ footer{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    color: white;
-    font-weight: bold;
+    .contenedorFooter{
+        color: white;
+        font-weight: bold;
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
 }

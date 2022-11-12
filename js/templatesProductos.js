@@ -5,10 +5,10 @@ const retornoCards = (array) => {
     array.nombre
   }"></div>
                 <div class="tarjetaNombre">${array.nombre}</div>
+                <div class="tarjetaTipo">${array.tipo}</div>
                 <div class="tarjetaPrecio">$ ${
                   array.precio * IVA.toFixed(2)
                 }</div>
-                <div class="tarjetaTipo">${array.tipo}</div>
                 <div class="tarjetaBoton">
                     <button class="button button-outline button-add" id="${
                       array.nombre
