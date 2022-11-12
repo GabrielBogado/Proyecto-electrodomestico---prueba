@@ -177,7 +177,7 @@ main .categorias a:hover {
   justify-content: center;
 }
 .contenedorCard .tarjetas {
-  background-color: aquamarine;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgba(52, 161, 237, 0.543855042) 0%, rgba(0, 212, 255, 0.437412465) 100%);
   border: solid 1px;
   width: 150px;
   height: 300px;
@@ -207,7 +207,12 @@ main .categorias a:hover {
 }
 
 footer {
-  background-color: blueviolet;
+  background-image: url(../img/coposNieve.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
