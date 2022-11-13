@@ -2,7 +2,8 @@ const contenedorCard = document.querySelector("div.contenedorCard");
 const inputBusqueda = document.querySelector("#busqueda");
 const botonBusqueda = document.querySelector("button.botonBusqueda");
 let productos = [];
-const URL = "../baseDatos/productos.json";
+const URL = "https://63717b3707858778617d1016.mockapi.io/cursos";
+const URL2 = "../baseDatos/productos.json";
 
 // CLICK PARA QUE EL VENDEDOR AGREGUE PRODUCTOS
 const activarBtnVendedor = () => {
