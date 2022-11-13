@@ -2,7 +2,7 @@ const contenedorCard = document.querySelector("div.contenedorCard");
 const inputBusqueda = document.querySelector("#busqueda");
 const botonBusqueda = document.querySelector("button.botonBusqueda");
 let productos = [];
-const URL = "../baseDatos/productos.json";
+/* const URL = "../baseDatos/productos.json"; */
 
 // CLICK PARA QUE EL VENDEDOR AGREGUE PRODUCTOS
 const activarBtnVendedor = () => {

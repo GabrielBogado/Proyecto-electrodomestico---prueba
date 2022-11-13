@@ -20,8 +20,8 @@ const retornoCards = (array) => {
 };
 
 const retornoError = () => {
-  return `<div class="tarjetaError">
-                <h2>Hemos tenido un problemas al cargar los productos 🧨</h2>
-                <h3>Porfavor intenta en unos instantes nuevamente...</h3>
+  return `<div class="tarjetaError contenedor">
+                <div class="contenedorMensaje"><h2>Hemos tenido un problemas al cargar los productos 🤕</h2></div>
+                <div class="contenedorMensaje"><h3>Porfavor intenta en unos instantes nuevamente...</h3></div>
             </div>`;
 };

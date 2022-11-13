@@ -49,7 +49,7 @@ const cargaTablaCarrito = () => {
 // SUMA DE CARRITO Y TOTAL
 function sumaCarrito() {
   totalCarrito = carrito.reduce((acc, elemento) => acc + elemento.precio, 0);
-  tbody.innerHTML += `<tr>
+  tbody.innerHTML += `<tr class="trTotal">
              <td></td>
              <td>TOTAL:</td>
              <td class="totalProducto">${totalCarrito * IVA.toFixed(2)}</td>

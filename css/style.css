@@ -231,13 +231,106 @@ main .categorias a:hover {
 
 .subtituloProductos {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   justify-content: center;
 }
 .subtituloProductos h2 {
   display: block;
   color: white;
   font-size: 2rem;
+}
+
+.tarjetaError {
+  background-color: rgba(10, 189, 224, 0.2);
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.2rem;
+}
+.tarjetaError .contenedorMensaje {
+  height: 100%;
+}
+
+.tituloCarrito {
+  background-color: rgba(23, 205, 233, 0.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 60px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tituloCarrito h1 {
+  font-size: 2.5rem;
+}
+
+.contenedorTabla {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  height: auto;
+  width: 100%;
+}
+table thead {
+  background: rgba(138, 43, 226, 0.2);
+}
+table thead th {
+  height: 50px;
+  width: 200px;
+  font-size: 2rem;
+}
+table tbody {
+  background-color: rgba(172, 240, 14, 0.2);
+}
+table tbody td {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+table tbody .trTotal {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: wheat;
+}
+table tbody .trTotal td {
+  font-size: 2rem;
+}
+table .botonEliminar {
+  margin-left: 20px;
+  background-color: rgba(172, 240, 14, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.contenedorBotonesDuo {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(23, 205, 233, 0.2);
+  height: 50px;
+  align-items: center;
+}
+.contenedorBotonesDuo button {
+  margin-right: 20px;
+  height: 30px;
+  width: 150px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.contenedorBotonesDuo button:hover {
+  background-color: rgb(191, 209, 241);
+  transition: 0.5s;
 }
 
 footer {
