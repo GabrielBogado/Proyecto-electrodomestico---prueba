@@ -249,12 +249,12 @@ main .categorias a:hover {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   font-size: 2.2rem;
 }
 .tarjetaError .contenedorMensaje {
   height: 100%;
+  padding-top: 50px;
 }
 
 .tituloCarrito {
