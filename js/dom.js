@@ -5,13 +5,6 @@ let productos = [];
 const URL = "https://63717b3707858778617d1016.mockapi.io/cursos";
 const URL2 = "../baseDatos/productos.json";
 
-// CLICK PARA QUE EL VENDEDOR AGREGUE PRODUCTOS
-const activarBtnVendedor = () => {
-  const botonVendedor = document.querySelector(".botonVendedor");
-  botonVendedor.addEventListener("click", () => agregarProducto());
-};
-activarBtnVendedor();
-
 // CLICK PARA QUE EL CLIENTE AGREGUE PRODUCTOS AL CARRITO
 const activarBotonesAdd = () => {
   const botonesAdd = document.querySelectorAll(
@@ -20,13 +13,6 @@ const activarBotonesAdd = () => {
   botonesAdd.forEach((btn) =>
     btn.addEventListener("click", (e) => agregarCarrito(e))
   );
-};
-
-const cargarProductosNuevos = () => {
-  nuevosProductos.forEach(
-    (producto) => (contenedorCard.innerHTML += retornoCards(producto))
-  );
-  activarBotonesAdd();
 };
 
 // FUNCION PARA CARGAR TARJETA DE PRODUCTOS
@@ -94,5 +80,4 @@ const recuperarCarrito = () => {
 };
 botonDeBusqueda();
 cargarProductos();
-cargarProductosNuevos();
 recuperarCarrito();
